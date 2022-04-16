@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const employeeSchema = new Schema({
-  employeeName: {
+const userSchema = new Schema({
+  username: {
     type: String,
     required: true,
     unique: true,
@@ -21,7 +21,7 @@ const employeeSchema = new Schema({
   }
 });
 
-employeeSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -30,10 +30,10 @@ employeeSchema.pre('save', async function (next) {
   next();
 });
 
-employeeSchema.methods.isCorrectPassword = async function (password) {
+userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const Employee = model('Employee', employeeSchema);
+const User = model('User', userSchema);
 
-module.exports = Employee;
+module.exports = User;

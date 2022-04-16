@@ -1,45 +1,45 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Employee } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    employee: async () => {
-      return Employees.find();
+    users: async () => {
+      return User.find();
     },
-    employee: async (parent, { employeeName }) => {
-      return Employee.findOne({ employeeName });
+    user: async (parent, { username }) => {
+      return User.findOne({ username });
     },
     me: async (parent, args, context) => {
-      if (context.employee) {
-        return Employee.findOne({ _id: context.employee._id });
+      if (context.user) {
+        return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
   },
 
   Mutation: {
-    addEmployee: async (parent, { employeeName, email, password }) => {
-      const employee = await Employee.create({ employeeName, email, password });
-      const token = signToken(employee);
-      return { token, employee };
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const employee = await Employee.findOne({ email });
+      const user = await User.findOne({ email });
 
-      if (!employee) {
-        throw new AuthenticationError('No employee found with this email address');
+      if (!user) {
+        throw new AuthenticationError('No user found with this email address');
       }
 
-      const correctPw = await employee.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
 
-      const token = signToken(employee);
+      const token = signToken(user);
 
-      return { token, employee };
+      return { token, user };
     }
   }
 };

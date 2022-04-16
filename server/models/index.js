@@ -1,3 +1,3 @@
-const Employee = require('./Employee');
+const User = require('./User');
 
-module.exports = { Employee };
+module.exports = { User };

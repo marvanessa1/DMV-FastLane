@@ -23,9 +23,9 @@ const ticketSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    userID: {
+    employeeID: {
         type: Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'Employee',
         required: true,
     }
 });

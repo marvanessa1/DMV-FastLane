@@ -7,15 +7,15 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = () => {
-  const { username: userParam } = useParams();
+  const { employeename: employeeParam } = useParams();
 
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
+  const { loading, data } = useQuery(employeeParam ? QUERY_USER : QUERY_ME, {
+    variables: { employeename: employeeParam },
   });
 
-  const user = data?.me || data?.user || {};
-  // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  const employee = data?.me || data?.employee || {};
+  // navigate to personal profile page if employeename is yours
+  if (Auth.loggedIn() && Auth.getProfile().data.employeename === employeeParam) {
     return <Navigate to="/me" />;
   }
 
@@ -23,7 +23,7 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
+  if (!employee?.employeename) {
     return (
       <h4>
         You need to be logged in to see this. Use the navigation links above to
@@ -36,13 +36,13 @@ const Profile = () => {
     <div>
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+          Viewing {employeeParam ? `${employee.employeename}'s` : 'your'} profile.
         </h2>
 
         <div className="col-12 col-md-10 mb-5">
           Content Here
         </div>
-        {!userParam && (
+        {!employeeParam && (
           <div
             className="col-12 col-md-10 mb-3 p-3"
             style={{ border: '1px dotted #1a1a1a' }}

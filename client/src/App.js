@@ -65,7 +65,7 @@ function App() {
                 element={<Profile />}
               />
               <Route 
-                path="/profiles/:employeename"
+                path="/profiles/:username"
                 element={<Profile />}
               />
             </Routes>

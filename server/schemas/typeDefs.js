@@ -7,6 +7,15 @@ const typeDefs = gql`
     email: String
     password: String
   }
+  type Ticket {
+    _id: ID!
+    firstName: String!
+    lastName: String!
+    visitReason: String!
+    description: String
+    complete: Boolean
+    userID: User
+  }
 
   type Auth {
     token: ID!

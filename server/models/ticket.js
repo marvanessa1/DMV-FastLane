@@ -12,7 +12,7 @@ const ticketSchema = new Schema({
         required: true,
         trim: true,
     },
-    visitReason: {
+    service: {
         type: String,
         required: true,
     },
@@ -23,6 +23,10 @@ const ticketSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    ticketId: {
+        type: String,
+        required: true,
+      },
     userID: {
         type: Schema.Types.ObjectId,
         ref: 'User',

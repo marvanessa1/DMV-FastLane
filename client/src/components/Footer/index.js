@@ -15,18 +15,16 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          by the DMV Fastlane team.
+        <div className="name_spacing">
+        <h4 className="m-0 text-orange">
+          Contributors:
         </h4>
+        <p>Vanessa Martinez</p>
+        <p>Maddy Kimborowicz</p>
+        <p>Arya Krishna</p>
+        <p>Eileen Mitchell</p>
+        <p>Emma Mondul</p>
+        </div>
       </div>
     </footer>
   );

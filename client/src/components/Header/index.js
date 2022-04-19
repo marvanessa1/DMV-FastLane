@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -9,13 +10,13 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+    <header className="bg-primary text-light mb-4 py-3 flex-row ">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
-          <Link className="text-light" to="/">
+          <Link className="text-orange" to="/">
             <h1 className="m-0">DMV Fastlane</h1>
-          </Link>
-          <p className="m-0">Flexible queue management in DMV Office.</p>
+          </Link >
+          <p className="m-0 text-lightorange">Flexible queue management in the DMV Office.</p>
         </div>
         <div>
           {Auth.loggedIn() ? (

@@ -1,20 +1,11 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Ticket } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find();
-    },
-    user: async (parent, { username }) => {
-      return User.findOne({ username });
-    },
-    me: async (parent, args, context) => {
-      if (context.user) {
-        return User.findOne({ _id: context.user._id });
-      }
-      throw new AuthenticationError('You need to be logged in!');
+    queue: async () => {
+      return Ticket.find({complete: false});
     },
   },
 
@@ -40,8 +31,55 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+  
+  // addTicket: async (parent, { ticketData }) => {
+  //     const addTicket = await Ticket.findOneAndUpdate(
+  //       { $push: { Ticket: ticketData } },
+  //       { new: true }
+  //     );
+  //     return addTicket;
+  // },
+
+  addTicket: async (parent, { ticketData }, context) => {
+    if (context.ticket) {
+      const ticket = await Ticket.create({
+        ticketData,
+      });
+
+      await Ticket.findOneAndUpdate(
+        { _id: context.ticket._id },
+        { $push: { Ticket: ticket.ticketId } }
+      );
+
+      return ticket;
     }
-  }
+  },
+
+  removeTicket: async (parent, { ticketId }) => {
+      const removeTicket = await Ticket.findOneAndUpdate(
+        { ticketId },
+        { $pull: { Ticket: { ticketId } } },
+        { new: true }
+      );
+      return removeTicket;
+  },
+
+  addTicket: async (parent, { ticketData }, context) => {
+    if (context.ticket) {
+      const ticket = await Ticket.create({
+        ticketData,
+      });
+
+      await Ticket.findOneAndUpdate(
+        { _id: context.ticket._id },
+        { $push: { Ticket: ticket.ticketId } }
+      );
+
+      return ticket;
+    }
+  },
+}
 };
 
 module.exports = resolvers;

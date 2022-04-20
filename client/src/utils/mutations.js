@@ -24,18 +24,18 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_TICKET = gql`
-  mutation addTicket($ticketData: TicketInfo!) {
-    addTicket(ticketId: $ticketId, firstName: $firstName, lastName: $lastName, service: $service, time: $time, description: $description, complete: $complete) {
-      _id
-      firstName
-      lastName
-      service
-      time
-      description
-      complete
-  }
-`;
+// export const ADD_TICKET = gql`
+//   mutation addTicket($ticketData: TicketInfo!) {
+//     addTicket(ticketId: $ticketId, firstName: $firstName, lastName: $lastName, service: $service, time: $time, description: $description, complete: $complete) {
+//       _id
+//       firstName
+//       lastName
+//       service
+//       time
+//       description
+//       complete
+//   }
+// `;
 
 
 

@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import Form from './pages/Form';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -62,7 +63,7 @@ function App() {
               />
               <Route 
                 path="/me"
-                element={<Profile />}
+                element={<Form />}
               />
               <Route 
                 path="/profiles/:username"

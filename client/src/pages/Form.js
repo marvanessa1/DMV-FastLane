@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 
 // import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import {ADD_TICKET} from '../utils/mutations'
 
 import Auth from '../utils/auth';
 
@@ -11,7 +12,7 @@ const Form = () => {
     const [lastname, setLastname] = useState('');
     const [notes, setNotes] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-
+    const [addTicket, {error}] = useMutation(ADD_TICKET);
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
         const { target } = e;
@@ -28,7 +29,7 @@ const Form = () => {
         }
     };
 
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
 
@@ -46,6 +47,10 @@ const Form = () => {
             return;
         }
         alert(`Hello ${lastname}`);
+        const{data} = await addTicket({
+            variables: {firstName:firstname, lastName: lastname}
+
+        })
 
         // If everything goes according to plan, we want to clear out the input after a successful registration.
         setLastname('');

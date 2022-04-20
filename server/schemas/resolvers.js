@@ -46,6 +46,9 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addTicket: async(parent,{ticketData}, context)=> {
+      return await Ticket.create(ticketData)
     }
   }
 };

@@ -435,6 +435,7 @@ a:hover {
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
   width: 100%;
+  background-color:#dfdfdf;
 }
 
 .w-75 {
@@ -461,6 +462,10 @@ a:hover {
 /* Margin - all sides */
 .m-0 {
   margin: 0 !important;
+  font-family: 'Bangers', cursive;
+  letter-spacing:3px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 
 .m-1 {
@@ -914,13 +919,21 @@ a:hover {
   color: #000000 !important;
 }
 
+.text-orange {
+  color: #f58020 !important;
+}
+
+.text-lightorange {
+  color: #fde6d2 !important;
+}
+
 .text-link {
   color: #1b89bc !important;
 }
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  background-color: #d3e7f4 !important;
 }
 
 .bg-info {
@@ -934,6 +947,9 @@ a:hover {
 .bg-light {
   background-color: #d9e9e8 !important;
 }
+.bg-lightgrey {
+  background-color: #f6f6f6 !important;
+}
 
 .bg-dark {
   background-color: #1a1a1a !important;
@@ -945,6 +961,14 @@ a:hover {
 
 .bg-black {
   background-color: #000000 !important;
+}
+
+.bg-blue {
+  background-color: #2389ca !important;
+}
+
+.bg-lightblue {
+  background-color: #d3e7f4 !important;
 }
 
 .bg-link {
@@ -1030,7 +1054,7 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: #96be60;
   color: #ffffff;
 }
 
@@ -1039,7 +1063,7 @@ a:hover {
 }
 
 .btn.btn-light {
-  background-color: #d9e9e8;
+  background-color: #e5eed8;
   color: #1a1a1a;
 }
 
@@ -1048,7 +1072,7 @@ a:hover {
 }
 
 .btn.btn-dark {
-  background-color: #1a1a1a;
+  background-color: #96be60;
   color: #d9e9e8;
 }
 
@@ -1084,7 +1108,7 @@ a:hover {
 }
 
 .card {
-  border: 1px solid #1a1a1a;
+  border: 1px solid #2389ca;
   margin-bottom: 1rem;
 }
 
@@ -1149,7 +1173,7 @@ form .form-input {
   background-color: #ffffff;
   margin: 0.625rem 0;
   font-size: 1.2rem;
-  border: 1px solid #484848;
+  border: 1px solid #2389ca;
   border-radius: 0.3rem;
 }
 
@@ -1519,6 +1543,7 @@ label form [type='radio'] {
   .align-content-center-md {
     align-content: center;
   }
+
 }
 
 /* col-lg */
@@ -1616,6 +1641,9 @@ label form [type='radio'] {
   }
 }
 
+.name_spacing{
+  
+}
 /* col-xl */
 @media screen and (min-width: 1200px) {
   .col-xl-1 {

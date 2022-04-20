@@ -19,11 +19,11 @@ const Footer = () => {
         <h4 className="m-0 text-orange">
           Contributors:
         </h4>
-        <p>Vanessa Martinez</p>
-        <p>Maddy Kimborowicz</p>
-        <p>Arya Krishna</p>
-        <p>Eileen Mitchell</p>
-        <p>Emma Mondul</p>
+        <p><a target="_blank" rel="noreferrer" href ="https://github.com/marvanessa1">Vanessa Martinez</a></p>
+        <p><a target="_blank" rel="noreferrer" href ="https://github.com/mkimborowicz">Maddy Kimborowicz</a></p>
+        <p><a target="_blank" rel="noreferrer" href ="https://github.com/AryaKris">Arya Krishna</a></p>
+        <p><a target="_blank" rel="noreferrer" href ="https://github.com/eileenhlmitchell19">Eileen Mitchell</a></p>
+        <p><a target="_blank" rel="noreferrer" href ="https://github.com/emondul">Emma Mondul</a></p>
         </div>
       </div>
     </footer>

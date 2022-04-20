@@ -23,7 +23,9 @@ const Home = () => {
         <img src="https://pixabay.com/get/g17b3e876733df6b111cfcc1f5ba9e273cd08547c139e2b4cdeba2c195a02c939955c320a7a8066e8bc163597b3169183f6c1e59c97085a3cb502f5db75280e63_1920.jpg" className="d-block w-50 center rounded-3" alt="..."/>
         <div className="carousel-caption d-none d-md-block bg-custom">
           <h5>The Witcher 3: Wild Hunt</h5>
+
         </div>
+
       </div>
       <div className="carousel-item">
         <img src="https://pixabay.com/get/g74ce0156f5cf77c31f2fc835714d43d9c6cbce1311436de10ef659e829d192b2cc04dc18b68ca50a5b286b80a0283e61_1920.jpg" className="d-block w-50 center rounded-3" alt="..."/>

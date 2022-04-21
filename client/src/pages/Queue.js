@@ -1,32 +1,31 @@
-import React, {useState} from 'react';
-// import { Navigate, useParams } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { QUERY_QUEUE } from "../utils/queries";
 
-// import Auth from '../utils/auth';
-import { GET_QUEUE } from '../utils/queries';
+const Queue = () => {
+  const { data } = useQuery(QUERY_QUEUE);
+  const tickets = data?.tickets ||{};
 
-const Queue= () => {
-    const { loading, data } = useQuery(GET_QUEUE, {
-        variables: { ticketId, service },
-      });
+  if (!tickets.length) {
+    return <h3>No Tickets Yet</h3>;
+  }
 
-      const user = data?.me || data?.user || {};
-
-      return (
-          <div>
-              <h3>Queue</h3>
-              <h5>Estimated wait time: </h5>
-              {thoughts &&
+  return (
+    <div>
+      <h3>Queue</h3>
+      <h5>Estimated wait time: </h5>
+      {tickets &&
         tickets.map((ticket) => (
           <div key={ticket._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {ticket.ticketId} <br />
-              <span style={{ fontSize: '1rem' }}>
+              <span style={{ fontSize: "1rem" }}>
                 had this thought on {ticket.service}
               </span>
             </h4>
           </div>
         ))}
-        </div>
-      );
+    </div>
+  );
 };
+export default Queue;

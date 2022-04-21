@@ -35,12 +35,59 @@ const Profile = () => {
   return (
     <div>
       <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
-
         <div className="col-12 col-md-10 mb-5">
-          Content Here
+                  {/* start of form */}
+          <div className="col-12 col-lg-10">
+            <div className="card">
+              <h4 className="card-header bg-blue text-white p-2">Add to queue</h4>
+              <div className="card-body">
+                <form>
+                  <input
+                    className="form-input"
+                    placeholder="First Name"
+                    name="firstName"
+                    type="text"
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Last Name"
+                    name="LastName"
+                    type="text"
+                  />
+                  <div className="form-input">
+                    <label for="service" class="form-label">Requested Service: </label>
+                    <select id="service" class="form-select w-100 m-1">
+                      <option selected>  Options...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div className="form-input">
+                    <label for="description" className="form-label">Notes: </label>
+                    <textarea
+                      className="form-input w-100"
+                      id="desctiption"
+                      placeholder="e.g. language request"
+                      style={{ lineHeight: '1.5', resize: 'vertical' }}
+                    />
+                  </div>
+                  <div className="row g-3 justify-center">
+                    <div className="col-md-6">
+                      <button type="submit" className="btn btn-lg btn-info">Submit</button>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <input className="form-check-input" type="radio" id="complete" />
+                        <label className="form-check-label" for="complete">
+                          Complete
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+                  {/* end of form */}
         </div>
         {!userParam && (
           <div

@@ -7,6 +7,8 @@ import {ADD_TICKET} from '../utils/mutations'
 
 import Auth from '../utils/auth';
 
+
+
 const Form = () => {
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
@@ -59,42 +61,53 @@ const Form = () => {
     };
 
     return (
-        <div>
+        <div className="col-12 col-lg-10">
             <p>Hello {lastname}</p>
-            <form className="form">
-                <input
-                    value={firstname}
-                    name="firstname"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="firstname"
-                />
-                <input
-                    value={lastname}
-                    name="lastname"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="lastname"
-                />
-                <select>
-                    <option>Option 1 </option>
+            <div className="card">    
+                <h4 className="card-header bg-blue text-white p-2">Add to queue</h4>
+                <div className="card-body">
+                    <form className="form">
+                        <input
+                            className="form-input"
+                            value={firstname}
+                            name="firstname"
+                            onChange={handleInputChange}
+                            type="text"
+                            placeholder="firstname"
+                        />
+                        <input
+                            className="form-input"
+                            value={lastname}
+                            name="lastname"
+                            onChange={handleInputChange}
+                            type="text"
+                            placeholder="lastname"
+                        />
+                        <select>
+                            <option>Option 1 </option>
 
-                </select>
-                <textarea
-                    value={notes}
-                    name="notes"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="Notes"
-                ></textarea>
-                <button type="button" onClick={handleFormSubmit}>Submit</button>
-                <button type = "button" >Delete</button>
-            </form>
-            {errorMessage && (
-                <div>
-                    <p className="error-text">{errorMessage}</p>
+                        </select>
+                        <textarea
+                            className="form-input w-100"
+                            value={notes}
+                            name="notes"
+                            onChange={handleInputChange}
+                            type="text"
+                            placeholder="Notes"
+                            style={{ lineHeight: '1.5', resize: 'vertical' }}
+                        ></textarea>
+                        <div >
+                            <button className="btn btn-lg btn-info m-1" type="button" onClick={handleFormSubmit}>Submit</button>
+                            <button className="btn btn-lg btn-warning m-1" type = "button" >Delete</button>
+                        </div>
+                    </form>
                 </div>
-            )}
+                {errorMessage && (
+                    <div>
+                        <p className="error-text">{errorMessage}</p>
+                    </div>
+                )}
+            </div>
         </div>
     );  
 

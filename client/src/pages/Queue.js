@@ -4,7 +4,7 @@ import { QUERY_QUEUE } from "../utils/queries";
 
 const Queue = () => {
   const { data } = useQuery(QUERY_QUEUE);
-  const tickets = data?.tickets ||{};
+  const tickets = data?.ticket ||{};
 
   if (!tickets.length) {
     return <h3>No Tickets Yet</h3>;
@@ -20,7 +20,7 @@ const Queue = () => {
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {ticket.ticketId} <br />
               <span style={{ fontSize: "1rem" }}>
-                had this thought on {ticket.service}
+                {ticket.service}
               </span>
             </h4>
           </div>

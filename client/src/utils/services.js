@@ -11,4 +11,8 @@ export const services = [
     name: "Pay a bill",
     time: 5,
   },
+  {
+    name: "Enhanced Driver License",
+    time: 10,
+  },
 ];

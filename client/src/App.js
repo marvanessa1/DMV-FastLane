@@ -13,6 +13,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Form from './pages/Form';
+import Queue from './pages/Queue';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -64,6 +65,10 @@ function App() {
               <Route 
                 path="/me"
                 element={<Form />}
+              />
+              <Route 
+                path="/queue"
+                element={<Queue />}
               />
               <Route 
                 path="/profiles/:username"

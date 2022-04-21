@@ -97,7 +97,7 @@ const Form = () => {
                             style={{ lineHeight: '1.5', resize: 'vertical' }}
                         ></textarea>
                         <div >
-                            <button className="btn btn-lg btn-info m-1" type="button" onClick={handleFormSubmit}>Submit</button>
+                            <button className="btn btn-lg btn-primary m-1" type="button" onClick={handleFormSubmit}>Submit</button>
                             <button className="btn btn-lg btn-warning m-1" type = "button" >Delete</button>
                         </div>
                     </form>

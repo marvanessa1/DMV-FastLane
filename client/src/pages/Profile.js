@@ -37,7 +37,7 @@ const Profile = () => {
       <div className="flex-row justify-center mb-3">
         <div className="col-12 col-md-10 mb-5">
                   {/* start of form */}
-          <div className="col-12 col-lg-10">
+          {/* <div className="col-12 col-lg-10">
             <div className="card">
               <h4 className="card-header bg-blue text-white p-2">Add to queue</h4>
               <div className="card-body">
@@ -86,7 +86,7 @@ const Profile = () => {
                 </form>
               </div>
             </div>
-          </div>
+          </div> */}
                   {/* end of form */}
         </div>
         {!userParam && (

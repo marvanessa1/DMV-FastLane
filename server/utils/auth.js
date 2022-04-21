@@ -15,6 +15,7 @@ module.exports = {
       return req;
     }
 
+    
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
@@ -29,3 +30,4 @@ module.exports = {
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
+

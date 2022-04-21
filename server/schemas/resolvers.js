@@ -38,6 +38,8 @@ const resolvers = {
       return await Ticket.create(ticketData)
     },
   },
+
 };
+
 
 module.exports = resolvers;

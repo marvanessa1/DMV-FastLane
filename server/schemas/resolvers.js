@@ -36,9 +36,8 @@ const resolvers = {
 
     addTicket: async(parent,{ticketData}, context)=> {
       return await Ticket.create(ticketData)
-    }
+    },
   },
-}
 };
 
 module.exports = resolvers;

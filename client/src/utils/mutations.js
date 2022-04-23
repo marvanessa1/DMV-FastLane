@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 export const ADD_TICKET = gql`
   mutation addTicket($ticketData: TicketInfo!) {
-    addTicket(ticketData:$ticketData) {
-     ticketId
+    addTicket(ticketData: $ticketData) {
+     _id
     }
   }
 `;

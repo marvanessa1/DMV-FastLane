@@ -23,8 +23,7 @@ const Home = () => {
     <div class="carousel-item">
       <img src={License} class="mx-auto d-block w-75" alt="..."/>
     </div>
-    <div class="carousel-item">
-    </div>
+    
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

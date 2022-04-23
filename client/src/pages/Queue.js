@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_QUEUE } from "../utils/queries";
 
 const Queue = () => {
-  const { data } = useQuery(QUERY_QUEUE);
+  const { data, loading } = useQuery(QUERY_QUEUE);
   const tickets = data?.queue || [];
 
   if (!tickets.length) {
@@ -22,10 +22,7 @@ const Queue = () => {
         tickets.map((ticket) => (
           <div className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
-              {ticket._id} <br />
-              <span style={{ fontSize: "1rem" }}>
-                {ticket.lastName}
-              </span>
+              {ticket._id}<br />
             </h4>
           </div>
         ))}

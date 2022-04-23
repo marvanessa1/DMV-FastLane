@@ -20,6 +20,7 @@ const Form = () => {
   const handleFormSubmit = async (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+    
 
     try {
       const { data } = await addTicket({
@@ -37,13 +38,14 @@ const Form = () => {
       service: "",
       description: "",
     });
+    window.location.assign('/queue');
   };
   return (
     <div className="col-12 col-lg-10">
       <div className="card">
         <h4 className="card-header bg-blue text-white p-2">Add to queue</h4>
         <div className="card-body">
-          <form className="form" action="/queue" onSubmit={handleFormSubmit}>
+          <form className="form" onSubmit={handleFormSubmit}>
             <input
               className="form-input"
               value={ticketData.firstName}
@@ -66,7 +68,6 @@ const Form = () => {
               value={ticketData.service}
               name="service"
               onChange={handleInputChange}
-              placeholder="Service"
             >
               {services.map((services) => {
                 return <option>{services.name}</option>;

@@ -8,7 +8,7 @@ const typeDefs = gql`
   }
 
   type Ticket {
-    ticketId: ID!
+    _id: ID!
     firstName: String!
     lastName: String!
     service: String!
@@ -23,7 +23,7 @@ const typeDefs = gql`
   }
 
   input TicketInfo {
-    ticketId: String
+    _id: String
     firstName: String!
     lastName: String!
     service: String!

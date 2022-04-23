@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     queue: async(parent,args,context) =>{
-     const tickets = await Ticket.findAll() 
+     const tickets = await Ticket.find() 
      return tickets
     },
   },
@@ -34,9 +34,13 @@ const resolvers = {
       return { token, user };
     },
 
-    addTicket: async(parent,{ticketData}, context)=> {
+    addTicket: async(parent, { ticketData })=> {
       return await Ticket.create(ticketData)
     },
+
+    removeTicket: async(parent, { ticketId } ) => {
+        return await Ticket.findOneAndDelete({ _id: ticketId });
+    }
   },
 
 };

@@ -24,8 +24,8 @@ export const QUERY_QUEUE = gql`
   query queue{
     queue{
       _id
-      tickedId
       service
+      time
     }
   }
 `;

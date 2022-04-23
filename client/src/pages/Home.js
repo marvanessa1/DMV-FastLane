@@ -1,6 +1,7 @@
-import Refuel from '../assets/Refuel.jpg'
+import Refuel from '../assets/refuel.jpg'
 import Drive from '../assets/Drive.jpg'
 import License from '../assets/License.jpg'
+
 
 
 const Home = () => {

@@ -10,7 +10,6 @@ const Form = () => {
     service: "",
     description: "",
   });
-  const [errorMessage, setErrorMessage] = useState("");
   const [addTicket, { error }] = useMutation(ADD_TICKET);
 
   const handleInputChange = (event) => {
@@ -21,10 +20,11 @@ const Form = () => {
   const handleFormSubmit = async (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+    
 
     try {
       const { data } = await addTicket({
-        variables: { ticketData: {...ticketData} },
+        variables: { ticketData: { ...ticketData } },
       });
 
       if (!data) throw new Error("something went wrong!");
@@ -38,6 +38,7 @@ const Form = () => {
       service: "",
       description: "",
     });
+    window.location.assign('/queue');
   };
   return (
     <div className="col-12 col-lg-10">
@@ -51,6 +52,7 @@ const Form = () => {
               name="firstName"
               onChange={handleInputChange}
               type="text"
+              to="/queue"
               placeholder="First Name"
             />
             <input
@@ -62,10 +64,10 @@ const Form = () => {
               placeholder="Last Name"
             />
             <select
+              className="form-input"
+              value={ticketData.service}
               name="service"
               onChange={handleInputChange}
-              value={ticketData.service}
-              style={{ lineHeight: "2", width: "250px", paddingLeft: "12px" }}
             >
               {services.map((services) => {
                 return <option>{services.name}</option>;
@@ -87,11 +89,6 @@ const Form = () => {
             </div>
           </form>
         </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
       </div>
     </div>
   );

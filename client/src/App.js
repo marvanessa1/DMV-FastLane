@@ -63,7 +63,7 @@ function App() {
                 element={<Signup />}
               />
               <Route 
-                path="/me"
+                path="/form"
                 element={<Form />}
               />
               <Route 

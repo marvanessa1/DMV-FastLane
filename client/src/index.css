@@ -971,7 +971,7 @@ a:hover {
 
 .bg-blue {
   background-color: #2389ca !important;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .bg-lightblue {
@@ -1016,7 +1016,7 @@ a:hover {
   color: #1a1a1a;
   background-color: #aeaeae;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -10px 10px -10px inset;
 }
 
 .btn:hover {
@@ -1047,12 +1047,12 @@ a:hover {
 .btn.btn-primary {
   background-color: #2d3e50;
   color: #d9e9e8;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-primary:hover {
   background-color: #08622f;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-danger {
@@ -1067,34 +1067,34 @@ a:hover {
 .btn.btn-info {
   background-color: #96be60;
   color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-info:hover {
   background-color: #08622f;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-light {
   background-color: #e5eed8;
   color: #1a1a1a;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-light:hover {
   background-color: #f58020;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-dark {
   background-color: #96be60;
   color: #d9e9e8;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-dark:hover {
   background-color: #08622f;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 15px -5px inset;
 }
 
 .btn.btn-white {

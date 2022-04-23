@@ -4,7 +4,7 @@ export const QUERY_QUEUE = gql`
   query queue{
     queue{
       _id
-      lastName
+      service
       time
     }
   }

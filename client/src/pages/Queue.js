@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_QUEUE } from "../utils/queries";
 
 const Queue = () => {
-  const { loading, data } = useQuery(QUERY_QUEUE);
+  const { data } = useQuery(QUERY_QUEUE);
   const tickets = data?.queue || [];
 
   if (!tickets.length) {

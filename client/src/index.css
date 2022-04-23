@@ -700,7 +700,7 @@ a:hover {
 
 .p-4 {
   padding: 1.375rem !important;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
   
 }
 
@@ -938,7 +938,7 @@ a:hover {
 /* BACKGROUND UTILS */
 .bg-primary {
   background-color: #d3e7f4 !important;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .bg-info {
@@ -971,7 +971,7 @@ a:hover {
 
 .bg-blue {
   background-color: #2389ca !important;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .bg-lightblue {
@@ -1047,12 +1047,12 @@ a:hover {
 .btn.btn-primary {
   background-color: #2d3e50;
   color: #d9e9e8;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .btn.btn-primary:hover {
   background-color: #08622f;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .btn.btn-danger {
@@ -1067,18 +1067,18 @@ a:hover {
 .btn.btn-info {
   background-color: #96be60;
   color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .btn.btn-info:hover {
   background-color: #08622f;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .btn.btn-light {
   background-color: #e5eed8;
   color: #1a1a1a;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
 }
 
 .btn.btn-light:hover {
@@ -1192,7 +1192,7 @@ form .form-input {
   font-size: 1.2rem;
   border: 1px solid #2389ca;
   border-radius: 0.3rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -38px 36px -28px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -5px 5px -5px inset;
 }
 
 form .form-input.form-input-squared {

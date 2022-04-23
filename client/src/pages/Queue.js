@@ -4,7 +4,7 @@ import { QUERY_QUEUE } from "../utils/queries";
 
 const Queue = () => {
   const { data } = useQuery(QUERY_QUEUE);
-  const tickets = data?.ticket ||{};
+  const tickets = data?.ticket || [];
 
   if (!tickets.length) {
     return <h3>No Tickets Yet</h3>;

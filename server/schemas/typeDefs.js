@@ -23,10 +23,10 @@ const typeDefs = gql`
   }
 
   input TicketInfo {
-    _id: String
+    # _id: String
     firstName: String!
     lastName: String!
-    service: String!
+    service: String
     time: Int
     description: String
     complete: Boolean

@@ -28,7 +28,7 @@ const Ticket = () => {
   const deleteTicket = async () => {
     try {
       const { data } = await removeTicket({
-        variables: { _id: ticket._id },
+        variables: { ticketId },
       });
       window.location.assign("/queue");
     } catch (err) {

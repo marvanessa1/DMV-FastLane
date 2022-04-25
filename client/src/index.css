@@ -474,6 +474,7 @@ a:hover {
 .footerDiv {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 /* HEIGHT / WIDTH UTILS */
 .w-100 {

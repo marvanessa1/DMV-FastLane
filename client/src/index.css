@@ -432,6 +432,43 @@ a:hover {
   text-decoration: underline;
 }
 
+.queueTitle {
+  font-family: 'Bangers', cursive;
+  font-size: 5vw;
+  text-align: center;
+  color: #f58020;
+  -webkit-text-stroke-width: 0.09vw;
+  -webkit-text-stroke-color: black;
+}
+.queueTickets {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.5vw;
+  background-color: #2389ca!important;
+  border-style: solid!important;  
+  text-decoration: none;
+}
+
+.ticketTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.5vw;
+  background-color: #2389ca!important;
+  border-style: solid!important;  
+  text-decoration: none;
+}
+
+.ticketButton {
+  background-color: #f58020!important;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.homeQueueDiv {
+  text-align: center;
+}
+
+.homeQueueBtn {
+  background-color: #f58020!important;
+}
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
   width: 100%;
@@ -928,7 +965,7 @@ a:hover {
 }
 
 .text-lightorange {
-  color: #fde6d2 !important;
+  color: #96be60 !important;
 }
 
 .text-link {
@@ -1472,6 +1509,7 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+
 
 /* col-md */
 @media screen and (min-width: 768px) {

@@ -11,7 +11,7 @@ Deployed Link: https://dmv-fastlane.herokuapp.com/
 ## Description
 
 Application to reduce the wait time at the DMV by implementing a fastLane queue.
-[Add a screenshot of your project here]
+![screenshot](/dmvFastLane.png?raw=true "Screenshot")
 
 ## Table of Contents
 

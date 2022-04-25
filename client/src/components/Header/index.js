@@ -16,7 +16,7 @@ const Header = () => {
           <Link className="text-orange" to="/">
             <h1 className="m-0">DMV Fastlane</h1>
           </Link >
-          <p className="m-0 text-lightorange">Flexible queue management in the DMV Office.</p>
+          <h4 className="m-0 text-lightorange">Flexible queue management in the DMV Office.</h4>
         </div>
         <div>
           {Auth.loggedIn() ? (

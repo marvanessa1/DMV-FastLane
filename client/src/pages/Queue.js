@@ -1,6 +1,8 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_QUEUE } from "../utils/queries";
+import { Link } from 'react-router-dom';
+// import services from  '../utils/services';
 
 const Queue = () => {
   const { data, loading } = useQuery(QUERY_QUEUE);
@@ -21,9 +23,10 @@ const Queue = () => {
       {tickets &&
         tickets.map((ticket) => (
           <div className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {ticket._id}<br />
-            </h4>
+            <Link className="card-header bg-primary text-light p-2 m-0"
+            to={`/ticket/${ticket._id}`}>
+              {ticket._id} {ticket.service}
+              </Link>
           </div>
         ))}
     </div>

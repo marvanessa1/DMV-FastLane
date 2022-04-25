@@ -30,3 +30,18 @@ export const ADD_TICKET = gql`
     }
   }
 `;
+
+export const REMOVE_TICKET = gql`
+  mutation removeTicket($ticketId: ID!) {
+    removeTicket(ticketId: $ticketId) {
+      _id
+      firstName
+      lastName
+      service
+      description
+      complete
+      time
+    }
+  }
+`;
+

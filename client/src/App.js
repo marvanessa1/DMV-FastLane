@@ -11,9 +11,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Profile from './pages/Profile';
 import Form from './pages/Form';
 import Queue from './pages/Queue';
+import Ticket from './pages/Ticket';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -71,8 +71,8 @@ function App() {
                 element={<Queue />}
               />
               <Route 
-                path="/profiles/:username"
-                element={<Profile />}
+                path="/ticket/:ticketId"
+                element={<Ticket />}
               />
             </Routes>
           </div>

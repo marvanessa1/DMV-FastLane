@@ -39,13 +39,13 @@ const Queue = () => {
   return (
     <div>
       <h3 className="queueTitle">Queue</h3>
-      <h5>Estimated wait time: <span className="text-{timeIndex}">{totalEstimatedTime}</span> minutes</h5>
+      <h5 style={{textAlign: "center"}}>Estimated wait time: <span className="text-{timeIndex}">{totalEstimatedTime}</span> minutes</h5>
       {tickets &&
         tickets.map((ticket) => (
           <div className="card mb-3">
             <Link className="card-header queueTickets"
               to={`/ticket/${ticket._id}`}>
-              {ticket._id} {ticket.service}
+              {ticket._id}
             </Link>
           </div>
         ))}

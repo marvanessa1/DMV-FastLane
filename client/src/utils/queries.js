@@ -9,3 +9,17 @@ export const QUERY_QUEUE = gql`
     }
   }
 `;
+
+export const QUERY_TICKET = gql`
+  query ticket($ticketId: ID!){
+    ticket(ticketId: $ticketId){
+      _id
+      firstName
+      lastName
+      service
+      description
+      complete
+      time
+    }
+  }
+`;

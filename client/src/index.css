@@ -446,6 +446,7 @@ a:hover {
   background-color: #2389ca!important;
   border-style: solid!important;  
   text-decoration: none;
+  text-align: center;
 }
 
 .ticketTitle {
@@ -468,6 +469,12 @@ a:hover {
 
 .homeQueueBtn {
   background-color: #f58020!important;
+}
+
+.footerDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 /* HEIGHT / WIDTH UTILS */
 .w-100 {

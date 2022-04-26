@@ -31,6 +31,7 @@ const Form = () => {
     } catch (err) {
       console.error(err);
     }
+    window.print(addTicket);
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setTicketData({
       firstName: "",
@@ -38,6 +39,7 @@ const Form = () => {
       service: "",
       description: "",
     });
+    
     window.location.assign('/queue');
   };
   return (
